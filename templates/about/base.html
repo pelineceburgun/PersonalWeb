@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        footer {
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px; 
+        }
+        footer p {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand"  href="#">Pelin Ece Burgun</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}"><i class="fa-solid fa-house"></i>Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}"><i class="fa-solid fa-address-card"></i>About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'portfolio' %}"><i class="fa-solid fa-folder-open"></i>Portfolio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}"><i class="fa-solid fa-phone"></i>Contact</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link " href="{% url 'references' %}"><i class="fa-solid fa-comments"></i>References</a>
+      </li>
+    </ul>
+  <form method="get" action="{% url 'search_all' %}">
+        <input type="text" name="q" placeholder="Search...">
+        <button type="submit">Search</button>
+  </form>
+      
+
+  </div>
+</nav>
+
+
+{% block content %}
+{% endblock %}
+<footer>
+  <p style="margin-bottom:5px;">By: Pelin Ece Burgun</p>
+  <p style="margin-bottom:5px; "><a href="mailto:pelinece03@gmail.com">pelinece03@gmail.com</a></p>
+</footer>
+<head>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    <title></title>
+</head>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

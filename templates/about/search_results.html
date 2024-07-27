@@ -1,0 +1,43 @@
+{% extends 'about/base.html' %}
+
+{% block content %}
+     {% if query %}
+        <p>Results for "{{ query }}" : </p>
+
+        <h2>Post Results:</h2>
+        <ul>
+            {% if post_results %}
+                {% for post in post_results %}
+                    <div class="post-item">
+                        <h3>{{ post.name}}</h3>
+                        <p>{{ post.title}}</p>
+                        <img src="{{ post.image.url }}" alt="{{ post.name }}">
+                        <p>{{ post.message }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Couldn't find any results for posts.</p>
+            {% endif %}
+        </ul>
+
+        <h2>Page Results:</h2>
+        <ul>
+            {% if page_results %}
+                {% for page in page_results %}
+                    <div class="page-item">
+                        <h3>{{ page.title }}</h3>
+                        <p>{{ page.slug }}</p>
+                        <p>{{ page.content }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Couldn't find any results in pages.</p>
+            {% endif %}
+        </ul>
+    {% else %}
+        <p>Please make a search.</p>
+    {% endif %}
+   
+    
+            
+{% endblock %}

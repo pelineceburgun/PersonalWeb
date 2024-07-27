@@ -1,0 +1,171 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color:#b6cdbd;
+    color: #333;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e4e4dc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    gap: 20px;
+}
+
+
+h1, h2, h3 {
+    margin-top: 40px;
+    color: #003366;
+    font-family: Rockwell, cursive;
+    font-size:40px;
+}
+
+
+p {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+a {
+    color: #c3195d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+button {
+    background-color: #c3195d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a8174d;
+}
+
+
+blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color:#8ab2ff;
+    border-left: 5px solid #c3195d;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1, h2, h3 {
+        margin-top: 20px;
+    }
+
+    p {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+}
+
+.example-image {
+    width: 200px;
+    height: auto;
+}
+.navbar .nav-link {
+    color: #F0F0F0 !important;
+}
+
+.navbar .nav-item {
+    color: #F0F0F0 !important;
+}
+.navbar .navbar-brand{
+    color:#F0F0F0;
+}
+.br{
+    font-size:20px;
+    font-family:  "Rockwell Extra Bold",sans-serif;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+input, textarea {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+#referencesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.reference-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.post-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.post-item h3 {
+    margin-top: 0;
+}
+
+.post-item p {
+    margin-bottom: 0;
+}
+.carousel-inner {
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+            right: 10px;
+}
