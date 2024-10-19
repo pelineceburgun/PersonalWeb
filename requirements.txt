@@ -1,2 +1,2 @@
-web: gunicorn pelinece.wsgi --log-file -
+
 
